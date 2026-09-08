@@ -1,6 +1,7 @@
 # Version 1.1
 
 - Update to 26.3.
+- Requires [Fabric Loader version 0.19.5](https://fabricmc.net/use/installer/) or greater to load.
 - Add PlatformMenuButton: Easily add your mod menu button to the title and pause screen under certain conditions.
 - Add UpdatableSpriteButton.
 - Add DillonLibModReferences.
