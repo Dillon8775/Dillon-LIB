@@ -16,7 +16,6 @@ import java.util.function.BiFunction;
 /**
  * Creates modern-like list widgets, with different texts and options.
  * @since 1.0
- * @see ModernListWidget
  */
 @Dill(DillType.CLIENT)
 public class ModernWidgetOptions {

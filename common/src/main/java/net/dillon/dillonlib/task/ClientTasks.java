@@ -1,5 +1,6 @@
 package net.dillon.dillonlib.task;
 
+import com.mojang.blaze3d.Blaze3D;
 import net.dillon.dillonlib.annotation.Dill;
 import net.dillon.dillonlib.annotation.DillType;
 import net.dillon.dillonlib.core.DillonLibModReferences;
@@ -31,6 +32,7 @@ import net.minecraft.util.ARGB;
 import net.minecraft.util.CommonColors;
 import net.minecraft.util.Util;
 
+import java.net.URI;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -310,12 +312,13 @@ public class ClientTasks {
     public static void openLink(Screen screen, String link, boolean trusted) {
         Minecraft minecraft = getMinecraft();
 
+        URI uri = URI.create(link);
         minecraft.gui.setScreen(new ConfirmLinkScreen(openInBrowser -> {
             if (openInBrowser) {
-                Util.getPlatform().openUri(link);
+                Blaze3D.openUri(uri);
             }
             minecraft.gui.setScreen(screen);
-        }, link, trusted));
+        }, uri, trusted));
     }
 
     /**

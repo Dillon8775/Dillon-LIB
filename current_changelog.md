@@ -9,7 +9,7 @@
 - Add DebugScreenEntriesInvoker.
 - Add DebugOptionsScreenMixin.
   - Fixes a bug where closing the debug options screen always set the parent screen to null.
-- Add @InDanger.
+- Remove ModernListWidget (unused).
 - ClientModPlatform:
     - Add overridable "menuButtons" method to configure PlatformMenuButtons.
 - ClientTasks:
